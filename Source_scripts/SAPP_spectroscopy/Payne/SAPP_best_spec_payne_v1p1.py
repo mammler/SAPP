@@ -25,6 +25,11 @@ from SAPP_spectroscopy.Payne.continuum_norm_spectra import continuum_normalise_s
 from matplotlib.pyplot import rc
 import time
 
+import os
+
+sapp_path = os.environ['SAPP_PATH']
+
+
 rc('text', usetex=False)
 plt.rcParams["font.family"] = "Times New Roman"
 
@@ -2557,7 +2562,7 @@ def error_mask_trim_process(residual_error_map,wvl_corrected,obs):
     return wvl_err_mask,err_mask
 
 
-Input_data_path_main = "../Input_data/" # running in main.py
+Input_data_path_main = sapp_path + "/Input_data/" # running in main.py
                                        
 # Input_data_path_main = "../../../Input_data/" # running directly here 
 

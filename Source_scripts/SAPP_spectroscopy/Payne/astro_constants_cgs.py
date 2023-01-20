@@ -8,7 +8,11 @@ Created on Mon Sep  2 10:12:18 2019
 
 import h5py
 
-h5f_PLATO_consts = h5py.File("../Input_data/PLATO_constants/constants.hdf5",'r')
+import os
+
+sapp_path = os.environ['SAPP_PATH']
+
+h5f_PLATO_consts = h5py.File(sapp_path + "/Input_data/PLATO_constants/constants.hdf5",'r')
 
 
 """
